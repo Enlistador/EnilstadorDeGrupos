@@ -106,6 +106,20 @@ table .deleteBtn {
 table .deleteBtn:hover {
   background-color: #e39f9f;
 }
+table .editBtn {
+  background-color: #c58430;
+  transition: all 0.2s;
+  color: white;
+}
+
+table .editBtn:hover {
+  background-color: #e3c89f;
+}
+
+table .hiddenRow {
+  display: none;
+}
+
 
 #tabla-body {
   font-size: 30px;
@@ -122,6 +136,7 @@ table .deleteBtn:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 10;
 }
 
 #fechas .fecha p {
@@ -207,17 +222,18 @@ table .deleteBtn:hover {
   align-items: center;
   justify-content: center;
 }
-
+.head h1 {
+  z-index: 2;
+  font-size: 70px;
+  font-weight: 400;
+  color: #323232;
+}
 #contenido {
   width: 100%;
   padding: 0px 10px 10px 10px;
   background-color: white;
 }
 
-.head h1 {
-  font-size: 70px;
-  font-weight: 400;
-}
 
 #dwnBtn {
   height: 74px;

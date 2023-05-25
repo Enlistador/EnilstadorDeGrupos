@@ -28,11 +28,11 @@
   <table id="tabla">
     <thead>
       <tr>
-        <th>Día</th>
-        <th>Hora</th>
+        <th style="width: 15%;">Día</th>
+        <th style="width: 5%;">Hora</th>
         <th>Lugar de encuentro</th>
-        <th>Territorio</th>
-        <th>Conductor</th>
+        <th style="width: 20%;">Territorio</th>
+        <th style="width: 20%;" >Conductor</th>
       </tr>
     </thead>
     <tbody id="tabla-body">
@@ -41,7 +41,6 @@
     <tfoot>
       <tr id="nuevo-objeto-row">
         <td>
-          <!-- <input type="text" id="nuevo-dia" placeholder="Día"> -->
           <select id="nuevo-dia">
             <option value="Lunes">Lunes</option>
             <option value="Martes">Martes</option>
@@ -56,7 +55,8 @@
         <td><input type="text" id="nuevo-lugar" placeholder="Lugar de encuentro"></td>
         <td><input type="text" id="nuevo-territorio" placeholder="Territorio"></td>
         <td><input type="text" id="nuevo-conductor" placeholder="Conductor"></td>
-        <td><button class="addButton" onclick="agregarObjeto()"><i class="fa-solid fa-plus"></i></button></td>
+        <td><button class="addButton" id="addRowBtn" onclick="agregarObjeto()"><i class="fa-solid fa-plus"></i></button>
+            <button class="addButton hiddenRow" id="editRowBtn" onclick="agregarObjeto()"><i class="fa-solid fa-floppy-disk"></i></button></td>
       </tr>
     </tfoot>
   </table>
