@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://kit.fontawesome.com/a087d87c78.js" crossorigin="anonymous"></script>
+    <title>Enlistador de Grupos</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=0.5">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div id="contenido" class="">
+    <div class="head">
+      <h1 id="titulo">Grupos de Predicación</h1>
+    </div>
+  <div id="fechas">
+    <div class="fecha">
+      <input type="date" required id="desde">
+      <label for="desde">Desde</label>
+      <div></div>
+      <p style="z-index: 5;" id="pDesde"></p>
+    </div>
+    <div class="fecha">
+      <input type="date" required id="hasta">
+      <label for="hasta">Hasta</label>
+      <div></div>
+      <p style="z-index: 5;" id="pHasta"></p>
+    </div>
+  </div>
+  <table id="tabla">
+    <thead>
+      <tr>
+        <th>Día</th>
+        <th>Hora</th>
+        <th>Lugar de encuentro</th>
+        <th>Territorio</th>
+        <th>Conductor</th>
+      </tr>
+    </thead>
+    <tbody id="tabla-body">
+      <!-- Aquí se cargarán los objetos dinámicamente -->
+    </tbody>
+    <tfoot>
+      <tr id="nuevo-objeto-row">
+        <td>
+          <!-- <input type="text" id="nuevo-dia" placeholder="Día"> -->
+          <select id="nuevo-dia">
+            <option value="Lunes">Lunes</option>
+            <option value="Martes">Martes</option>
+            <option value="Miércoles">Miércoles</option>
+            <option value="Jueves">Jueves</option>
+            <option value="Viernes">Viernes</option>
+            <option value="Sábado">Sábado</option>
+            <option value="Domingo">Domingo</option>
+            </select>
+        </td>
+        <td><input type="time" id="nueva-hora" placeholder="Hora"></td>
+        <td><input type="text" id="nuevo-lugar" placeholder="Lugar de encuentro"></td>
+        <td><input type="text" id="nuevo-territorio" placeholder="Territorio"></td>
+        <td><input type="text" id="nuevo-conductor" placeholder="Conductor"></td>
+        <td><button class="addButton" onclick="agregarObjeto()"><i class="fa-solid fa-plus"></i></button></td>
+      </tr>
+    </tfoot>
+  </table>
+  <button id="dwnBtn" onclick="capturarTabla()">Descargar <i class="fa-solid fa-download"></i></button>
+</div>
+  <script src="html2canvas.min.js"></script>
+  <script src="FileSaver.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

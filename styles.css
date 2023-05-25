@@ -1,0 +1,255 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: Segoe UI, Frutiger, Frutiger Linotype, Dejavu Sans, Helvetica Neue, Arial, sans-serif;
+  font-size: 1.2rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+th,
+td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  border: 1px solid #2c2c2c4b;
+}
+
+.variant
+{
+  background-color: rgb(240, 240, 240);
+}
+
+th {
+  background-color: #323232;
+  border: none;
+  color: white;
+  border: 3px solid white;
+}
+
+h1 {
+  text-align: center;
+  color: #323232;
+}
+
+#fechas {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+button {
+  display: block;
+  margin: 10px auto;
+}
+
+select,
+table tfoot input[type="time"],
+table tfoot input[type="text"] {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  outline: none;
+  border: none;
+  font-size: 30px;
+}
+
+table tbody {
+  text-align: center;
+}
+
+table thead th {
+  font-size: 25px;
+  font-weight: 450;
+}
+
+table button {
+  width: 80px;
+  height: 80px;
+  font-size: 40px;
+  border: none;
+}
+
+table .addButton {
+  background-color: #4a6da7;
+  transition: all 0.2s;
+  color: white;
+}
+
+table .addButton:hover {
+  background-color: #9fb9e3;
+}
+
+table .deleteBtn {
+  background-color: #a74a4a;
+  transition: all 0.2s;
+  color: white;
+}
+
+table .deleteBtn:hover {
+  background-color: #e39f9f;
+}
+
+#tabla-body {
+  font-size: 30px;
+}
+
+#fechas {
+  display: flex;
+  gap: 100px;
+  align-items: center;
+  justify-content: center;
+}
+
+#fechas .fecha {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#fechas .fecha p {
+  position: absolute;
+  color: #323232;
+  font-size: 30px;
+}
+
+.fecha label {
+  position: absolute;
+  font-size: 35px;
+  padding: 0px 15px 3px 15px;
+  transition: all 0.1s;
+  pointer-events: none;
+  color: white;
+  z-index: 1;
+}
+
+.fecha div {
+  position: absolute;
+  border-radius: 10px;
+  width: 230px;
+  height: 73px;
+  border-top: none;
+  background-color: #424242;
+  border-bottom: 5px solid #323232;
+  transition: background-color 0.1s;
+}
+
+.fecha input {
+  z-index: 5;
+  border: none;
+  outline: none;
+  background-color: unset;
+  font-size: 30px;
+  width: 200px;
+  opacity: 0;
+}
+
+.fecha input:hover ~ div
+{
+  background-color: #f1f1f1;
+  outline: 3px solid #323232;
+
+}
+.fecha input:hover ~ label
+{
+  color: #323232;
+}
+
+.fecha input:valid ~ div,
+.fecha input:focus ~ div {
+  min-width: 0px;
+  min-height: 0px;
+  font-size: 30px;
+  background-color: #f1f1f1;
+  outline: 3px solid #323232;
+}
+
+.fecha input:valid,
+.fecha input:focus {
+  opacity: 1;
+  outline: unset;
+  color: #323232;
+}
+
+.fecha input:focus ~ label,
+.fecha input:valid ~ label {
+  transform: translateY(-45px) translateX(-45px);
+  background-color: #323232;
+  color: white;
+  padding: 0px 15px 3px 15px;
+  border-radius: 10px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.head {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#contenido {
+  width: 100%;
+  padding: 0px 10px 10px 10px;
+  background-color: white;
+}
+
+.head h1 {
+  font-size: 70px;
+  font-weight: 400;
+}
+
+#dwnBtn {
+  height: 74px;
+  width: 230px;
+  scale: 1.2;
+  border: none;
+  background-color: #4a6da7;
+  color: white;
+  font-size: 30px;
+  transition: all 0.2s;
+  border-radius: 5px;
+  padding: 0px 20px 0px 20px;
+}
+
+#dwnBtn:hover {
+  border-radius: 15px;
+  background-color: #9fb9e3;
+}
+
+
+.capture button {
+  display: none;
+}
+
+.capture table tfoot {
+  display: none;
+}
+
+.capture .deleteTable {
+  display: none;
+}
+
+.capture input[type="date"] {
+  opacity: 0;
+}
