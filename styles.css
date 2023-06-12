@@ -39,10 +39,18 @@ td {
 }
 
 th {
-  background-color: #323232;
+  /* background-color: #323232; */
+  background-color: #6d6d6d;
+  /* background-color: #d1d1d1; */
   border: none;
   color: white;
-  border: 3px solid white;
+  /* color: #323232; */
+  border: 2px solid white;
+}
+
+.colored th
+{
+  background-color: #3b5886;
 }
 
 h1 {
@@ -163,7 +171,57 @@ table .hiddenRow {
   border-top: none;
   background-color: #424242;
   border-bottom: 5px solid #323232;
-  transition: background-color 0.1s;
+  transition: background-color 0.1s; 
+  /* animation: box-shadow-animation 1S linear infinite; */
+
+}
+
+.colored .fecha div
+{
+  background-color: #4aa780;
+  border-bottom: 5px solid #328062;
+}
+
+.colored .fecha input:valid ~ div,
+.colored .fecha input:focus ~ div {
+  background-color: #f1f1f1;
+  outline: 3px solid #328062;
+}
+
+.colored .fecha input:hover ~ div
+{
+  background-color: #f1f1f1;
+  outline: 3px solid #328062;
+
+}
+.colored .fecha.alt div
+{
+  background-color: #a74a4a;
+  border-bottom: 5px solid #8f3737;
+}
+
+.colored .fecha.alt input:valid ~ div,
+.colored .fecha.alt input:focus ~ div {
+  background-color: #f1f1f1;
+  outline: 3px solid #8f3737;
+}
+
+.colored .fecha.alt input:hover ~ div
+{
+  background-color: #f1f1f1;
+  outline: 3px solid #8f3737;
+
+}
+
+
+.colored .fecha input:focus ~ label,
+.colored .fecha input:valid ~ label {
+  background-color: #4aa780;
+}
+
+.colored .fecha.alt input:focus ~ label,
+.colored .fecha.alt input:valid ~ label {
+  background-color: #a74a4a;
 }
 
 .fecha input {
@@ -180,6 +238,7 @@ table .hiddenRow {
 {
   background-color: #f1f1f1;
   outline: 3px solid #323232;
+  animation: unset;
 
 }
 .fecha input:hover ~ label
@@ -194,6 +253,7 @@ table .hiddenRow {
   font-size: 30px;
   background-color: #f1f1f1;
   outline: 3px solid #323232;
+  animation: unset;
 }
 
 .fecha input:valid,
@@ -222,22 +282,43 @@ table .hiddenRow {
   align-items: center;
   justify-content: center;
 }
+
 .head h1 {
   z-index: 2;
   font-size: 70px;
   font-weight: 400;
   color: #323232;
 }
+
+.head #titleText
+{
+  font-size: 70px;
+  font-weight: 400;
+  outline: none;
+  border: none;
+  text-align: center;
+  color: #323232;
+}
+
 #contenido {
   width: 100%;
   padding: 0px 10px 10px 10px;
   background-color: white;
 }
 
+.dwnContainer
+{
+  display: flex;
+  align-items: center;
+  justify-content: row;
+  width: 100%;
+  height: 100px;
+  gap: 1px;
+}
 
 #dwnBtn {
   height: 74px;
-  width: 230px;
+  width: 260px;
   scale: 1.2;
   border: none;
   background-color: #4a6da7;
@@ -246,11 +327,31 @@ table .hiddenRow {
   transition: all 0.2s;
   border-radius: 5px;
   padding: 0px 20px 0px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 15px;
+}
+
+#dwnBtn.alt
+{
+  background-color: #323232;
+}
+
+#dwnBtn.alt:hover
+{
+  background-color: #636363;
+}
+
+#dwnBtn p
+{
+  font-size: 15px;
 }
 
 #dwnBtn:hover {
   border-radius: 15px;
-  background-color: #9fb9e3;
+  background-color: #8babdf;
 }
 
 
@@ -269,3 +370,33 @@ table .hiddenRow {
 .capture input[type="date"] {
   opacity: 0;
 }
+.capture .dwnContainer
+{
+  display: none;
+}
+
+.capture #titleText
+{
+  display: none;
+}
+#titulo
+{
+  display: none;
+}
+.capture #titulo
+{
+  display: unset;
+}
+
+
+@keyframes box-shadow-animation {
+  0% {
+    box-shadow: 0 0 5px #ff5100;
+    outline: 2px solid #ff5100;
+  }
+  50% {box-shadow: 0 0 20px #FFA500;
+    outline: 5px solid #FFA500;}
+  100% {box-shadow: 0 0 5px #ff5100;
+    outline: 2px solid #ff5100;}
+}
+

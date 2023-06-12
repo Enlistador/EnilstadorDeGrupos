@@ -138,6 +138,7 @@ function check()
 {
   const desde = document.getElementById('desde').value;
   const hasta = document.getElementById('hasta').value;
+  const title = document.getElementById('titleText').value;
 
   
   if(desde === '' || hasta === '')
@@ -150,6 +151,11 @@ function check()
     alert("¡No hay ningun grupo en la lista!. Descarga Cancelada")
     return false
   }
+  else if (title === '')
+  {
+    alert("¡Porfavor establezca un título a la lista!. Descarga Cancelada")
+    return false
+  }
   
   return true;
 
@@ -157,18 +163,28 @@ function check()
 
 
 
-function capturarTabla() {
+function capturarTabla(nc = false) {
 
   if(!check()) return;
+
+  
+
   const desde = document.getElementById('desde').value;
   const hasta = document.getElementById('hasta').value;
+  const title = document.getElementById('titleText').value;
 
   const content = document.getElementById("contenido");
   content.classList.add("capture");
 
+  if(nc)
+  {
+    content.classList.remove("colored");
+  }
+
   // Mostrar las fechas seleccionadas en el elemento p
   pDesde.innerHTML = desde;
   pHasta.innerHTML = hasta;
+  titulo.innerHTML = title;
 
   setTimeout(function() {
     html2canvas(content)
@@ -178,6 +194,7 @@ function capturarTabla() {
         });
       });
     content.classList.remove("capture");
+    content.classList.add("colored");
     pDesde.innerHTML = "";
     pHasta.innerHTML = "";
   }, 1000);
